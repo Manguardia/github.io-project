@@ -4,7 +4,10 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta charset="utf-8">
-
+ ...
+            <link rel="stylesheet" href="teclado-auxiliar-integrado.css" />
+            <script src="teclado-auxiliar-integrado.js"></script>
+            ...
 </head>
 
 <body>
@@ -40,7 +43,14 @@
 Precio segun cantidad ▲ ▼ (decimal indica cuantos llevas)RT1$
  <input type="number" name="Valor RT1" value="14990" min="0"
                                                 max="5000000000" step="14990.00001">
-
+  ...
+           <script>
+               var teC = teC || {};
+               window.onload = function() {
+                    //carga el teclado
+                    teC.cargarTecladoAuxiliar(document.body);
+               };
+           </script>
 
 </p>
      Confirma cuantos llevas RT1:
